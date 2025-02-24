@@ -1,0 +1,28 @@
+#@data/values
+---
+broadcomPortalUsername: "john@doe.com"
+broadcomPortalPassword: "eyXYZ_XYZ"
+pivnetApiToken: "xyzzyz"
+vcenterUsername: "administrator@vsphere.local"
+vcenterPassword: "VMware1!"
+vcenterFqdn: "vcenter.lab.loc"
+baseDomain: "tdmc.lab.loc"
+supervisorIp: "10.10.0.101"
+tdmcSreLoginUsername: "sre@lab.loc"
+tdmcSreLoginPassword: "VMware1!"
+tdmcControlPlaneVCNamespace: "tdmccpns"
+tdmcControlPlaneTKGClusterName: "tdmc-cp01-cluster"
+tdmcControlPlaneTKGWorkerReplicas: 4
+tdmcControlPlaneTKGStorageClass: "tanzu-storage-policy"
+tdmcControlPlaneTKGCustomVMClass: "tdmc"
+tdmcDataPlaneVCNamespace: "tdmcdpns"
+tdmcDataPlaneTKGClusterName: "tdmc-dp01-cluster"
+tdmcDataPlaneTKGWorkerReplicas: 5
+tdmcDataPlaneTKGStorageClass: "tanzu-storage-policy"
+tdmcDataPlaneTKGCustomVMClass: "tdmc"
+tkrName: "v1.26.5---vmware.2-fips.1-tkg.1"
+#! Optional - Air-Gap
+base64TrustedCA: "LS0tLS1CRUdJTiB..=="
+privateRegistryUrl: "harbor.lab.loc/tdmc/v1.0.0"
+privateRegistryUsername: "admin"
+privateRegistryPassword: "VMware1!"

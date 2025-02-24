@@ -1,0 +1,46 @@
+
+#@ load("@ytt:data", "data")
+---
+apiVersion: run.tanzu.vmware.com/v1alpha3
+kind: TanzuKubernetesCluster
+metadata:
+  name: #@ data.values.tdmcControlPlaneTKGClusterName
+  namespace: #@ data.values.tdmcControlPlaneVCNamespace
+spec:
+  topology:
+    controlPlane:
+      replicas: 1
+      vmClass: best-effort-medium
+      storageClass: #@ data.values.tdmcControlPlaneTKGStorageClass
+      tkr:
+        reference:
+          name: #@ data.values.tkrName
+    nodePools:
+      - replicas: #@ data.values.tdmcControlPlaneTKGWorkerReplicas
+        name: tdmcnp
+        vmClass: #@ data.values.tdmcControlPlaneTKGCustomVMClass
+        storageClass: #@ data.values.tdmcControlPlaneTKGStorageClass
+        tkr:
+          reference:
+            name: #@ data.values.tkrName
+        volumes:
+          - name: containerd
+            mountPath: /var/lib/containerd
+            capacity:
+              storage: 30Gi
+  settings:
+    network:
+      cni:
+        name: antrea
+      services:
+        cidrBlocks: ["100.64.0.0/13"]
+      pods:
+        cidrBlocks: ["100.96.0.0/11"]
+      #@ if data.values.base64TrustedCA != None:
+      trust:
+        additionalTrustedCAs:
+          - name: myTrustedCA
+            data: #@ data.values.base64TrustedCA
+      #@ end
+    storage:
+      defaultClass: #@ data.values.tdmcControlPlaneTKGStorageClass
