@@ -59,7 +59,7 @@ Configure DNS records and/or DNS delegation for **$baseDomain$** with the detail
 
 Access the TDMC GUI at this URL:
 
-[https://tdmc-cp-tdmc.$baseDomain$/](https://tdmc-cp-tdmc.$baseDomain$/)
+[https://tdmc-cp-tdmc.$tdmcBaseDomain$/](https://tdmc-cp-tdmc.$tdmcBaseDomain$/)
 
 
 
