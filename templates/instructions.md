@@ -105,7 +105,7 @@ tdmc-installer delete -f ./generated/tdmc-config-generated.yaml
 Links
 -------
 
-[Tanzu Data Management Console Docs]([https://tdmc-cp-tdmc.$tdmcBaseDomain$/](https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-data-management-console/1-0/tdmc/index.html))
+https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-data-management-console/1-0/tdmc/index.html
 
 
 
