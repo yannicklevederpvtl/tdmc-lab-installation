@@ -3,10 +3,10 @@ Tanzu Data Management Console (TDMC) Deployment Instructions
 
 Commands to deploy one TDMC Control Plane and one TDMC Data Plane in your VMware vSphere Kubernetes Service environment.
 
-- [Custom VM Class Creation](custom-vm-class-creation)
-- [VKS Clusters Creation](vks-clusters-creation)
+- [Custom VM Class Creation](#custom-vm-class-creation)
+- [VKS Clusters Creation](#vks-clusters-creation)
 - [TDMC Control Plane Installation](#tdmc-control-plane-installation)
-- [TDMC Data Plane Creation](#tdmc-control-plane-creation)
+- [TDMC Data Plane Creation](#tdmc-data-plane-creation)
 
 
 Custom VM Class Creation
