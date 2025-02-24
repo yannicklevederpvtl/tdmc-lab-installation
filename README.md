@@ -42,7 +42,7 @@ https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-data-manag
 To get your Pivnet Token\
 https://support.broadcom.com/group/ecx/tanzu-token
 
-To get your Broadcom Support Portal\
+To get your Broadcom Support Portal credential\
 https://support.broadcom.com/group/ecx/productdownloads?subfamily=Tanzu%20Data%20Management%20Console
 
 
