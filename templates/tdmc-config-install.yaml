@@ -1,0 +1,53 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:json", "json")
+#@ def credential():
+#@   return json.encode(json.decode(data.read("credential.json")), indent=2)
+#@ end
+#@ def certificate():
+#@   return "*." + data.values.tdmcBaseDomain
+#@ end
+---
+EnvironmentDetails:
+  Environment: tdmc
+  StorageClass: #@ data.values.tdmcControlPlaneTKGStorageClass
+  Provider: tkg
+  Insecure: false #! Set true if insecure registries are being used
+VSphereDetails:
+  username: #@ data.values.vcenterUsername
+  password: #@ data.values.vcenterPassword
+  fqdn: #@ data.values.vcenterFqdn
+  VSphereNamespace: #@ data.values.tdmcControlPlaneVCNamespace
+  tkgClusterName: #@ data.values.tdmcControlPlaneTKGClusterName
+  supervisorIp: #@ data.values.supervisorIp
+ControlPlaneSize:
+  controlPlaneSize: tiny
+CertificateDetails:
+  generateSelfSignedCert: true
+  configureCoreDns: true
+  #! if configureCoreDns: false, then cluster core dns won't be patched and it might lead to failure of communication between control plane and data plane pods
+  #! If generateSelfSignedCert: false, enter all the three certificateCA, certificateKey, certificateBody
+  #! Enter idpIp, operationQueueIp and controlPlaneIp in case you want to provide custom IP for the exposed services
+  #! certificateCA:
+  #! certificateKey:
+  #! certificateBody:
+  #! Certificate Domain Should be wildcard certificate domain. Ex - *.tdmc.broadcom.com
+  certificateDomain: #@ certificate()
+  idpIp: ""
+  operationQueueIp: ""
+  controlPlaneIp: ""
+#!SmtpDetails:
+  #! #SMTP Section is optional, we can remove this section if SMTP details are unavailable
+  #! host: smtp_host_goes_here
+  #! port: smtp_port_goes_here
+  #! from: smtp_from_goes_here
+  #! username: smtp_username_goes_here
+  #! password: smtp_password_goes_here
+  #! tlsEnabled: true_or_false
+  #! authEnabled: true_or_false
+SreLoginDetails:
+  username: #@ data.values.tdmcSreLoginUsername
+  password: #@ data.values.tdmcSreLoginPassword
+ImageRegistryDetails:
+  registryType: "JFrog"
+  registryUrl: "tdmc.packages.broadcom.com/v1.0.0"
+  registryCreds: #@ credential()

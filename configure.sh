@@ -22,7 +22,7 @@ parse_yaml() {
 eval $(parse_yaml tdmc-config.yaml "config_")
 
 ./tdmc-installer/bin/credential-generator-linux-amd64 --url "tdmc.packages.broadcom.com/v1.0.0" --username $config_broadcomPortalUsername --password $config_broadcomPortalPassword
-ytt -f ./tdmc-config.yaml -f ./templates/tdmc-config.yaml -f credential.json > ./generated/tdmc-config-generated.yaml
+ytt -f ./tdmc-config.yaml -f ./templates/tdmc-config-install.yaml -f credential.json > ./generated/tdmc-config-generated.yaml
 ytt -f ./tdmc-config.yaml -f ./templates/tdmccp-cluster.yaml > ./generated/tdmccp-cluster-generated.yaml
 ytt -f ./tdmc-config.yaml -f ./templates/tdmcdp-cluster.yaml > ./generated/tdmcdp-cluster-generated.yaml
 
