@@ -55,7 +55,7 @@ Launch the installation of the Control Plate of Tanzu Data Mangement Console Con
 tdmc-installer install -f ./generated/tdmc-config-generated.yaml
 ```
 
-Configure DNS records and/or DNS delegation for **$baseDomain$** with the details provided at the end of the installation
+Configure DNS records and/or DNS delegation for **$tdmcBaseDomain$** with the details provided at the end of the installation
 
 Access the TDMC GUI at this URL:
 
