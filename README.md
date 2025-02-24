@@ -32,3 +32,9 @@ Follow the generated instructions based on your environment variables and creden
 ```
 ./generated/instructions.md
 ```
+
+Links
+-------
+
+Tanzu Data Management Console documentation\
+https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-data-management-console/1-0/tdmc/index.html
