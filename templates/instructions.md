@@ -42,7 +42,7 @@ kubectl apply -f ./generated/tdmcdp-cluster-generated.yaml
 
 TDMC Control Plane Installation
 -----------
-Connect to your VKS Control Plane VKS Cluster:
+Connect to your TDMC Control Plane VKS Cluster:
 
 ```
 kubectl vsphere login --server $supervisorIp$ -u $vcenterUsername$ --insecure-skip-tls-verify -v=10 --tanzu-kubernetes-cluster-namespace $tdmcControlPlaneVCNamespace$  --tanzu-kubernetes-cluster-name $tdmcControlPlaneTKGClusterName$ 
