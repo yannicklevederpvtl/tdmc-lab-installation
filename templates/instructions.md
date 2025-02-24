@@ -49,7 +49,7 @@ kubectl vsphere login --server $supervisorIp$ -u $vcenterUsername$ --insecure-sk
 kubectl config use-context $tdmcControlPlaneTKGClusterName$
 ```
 
-Launch the installation of the Control Plate of Tanzu Data Mangement Console Control Plane in the cluster:
+Launch the Tanzu Data Mangement Console Control Plane installation in the cluster:
 
 ```
 tdmc-installer install -f ./generated/tdmc-config-generated.yaml
