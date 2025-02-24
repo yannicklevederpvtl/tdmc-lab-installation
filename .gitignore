@@ -1,0 +1,10 @@
+credential.json
+temp/
+tdmc-installer/
+generated/instructions.md
+generated/tdmccp-cluster-generated.yaml
+generated/tdmcdp-cluster-generated.yaml
+generated/tdmc-config-generated.yaml
+.envrc
+.vscode/
+tdmc-config.yaml
