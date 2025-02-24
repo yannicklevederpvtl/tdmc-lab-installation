@@ -1,7 +1,7 @@
 Tanzu Data Management Console Demo Lab Installation
 =================
 
-Scripts to download Tanzu Data Management Console tools and generate artifacts for the installation on VMware vSphere Kubernetes Service
+Scripts to download Tanzu Data Management Console tools and generate artifacts for installation on VMware vSphere Kubernetes Service
 
 ### Download and install tools in your jumpbox ###
 
