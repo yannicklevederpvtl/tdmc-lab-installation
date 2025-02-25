@@ -57,7 +57,7 @@ Launch the Tanzu Data Mangement Console Control Plane installation in this clust
 tdmc-installer install -f ./generated/tdmc-config-generated.yaml
 ```
 
-Configure DNS records and/or DNS delegation for **$tdmcBaseDomain$** with the details provided at the end of the installation
+Configure DNS delegation or DNS records for **$tdmcBaseDomain$** with the details provided at the end of the installation
 
 Then access the TDMC GUI at this URL:
 
