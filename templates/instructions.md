@@ -23,6 +23,8 @@ Create a custom VM Class for your VKS clusters:
 VKS Clusters Creation
 -----------
 
+2 Kubernetes clusters will be used, one for the TDMC Control Plane and another to deploy one TDMC Data Plane (where the data services will be provisionned)
+
 Create the TDMC Control Plane VKS cluster:
 
 ```
@@ -89,6 +91,12 @@ Go to "Infrastructure" "Data Planes", Click "Create New Data Plane"
 - Select your newly created Cloud Provider Account
 - Select your $tdmcDataPlaneTKGClusterName$ VKS cluster
 - Complete the remaining information and create the data plane
+
+
+Remaining tasks
+-----------
+
+Follow the official doccumentation to create organizations and provision data services
 
 
 ### Uninstall
