@@ -49,7 +49,7 @@ kubectl vsphere login --server $supervisorIp$ -u $vcenterUsername$ --insecure-sk
 kubectl config use-context $tdmcControlPlaneTKGClusterName$
 ```
 
-Launch the Tanzu Data Mangement Console Control Plane installation in the cluster:
+Launch the Tanzu Data Mangement Console Control Plane installation in this cluster:
 
 ```
 tdmc-installer install -f ./generated/tdmc-config-generated.yaml
@@ -57,7 +57,7 @@ tdmc-installer install -f ./generated/tdmc-config-generated.yaml
 
 Configure DNS records and/or DNS delegation for **$tdmcBaseDomain$** with the details provided at the end of the installation
 
-Access the TDMC GUI at this URL:
+Then access the TDMC GUI at this URL:
 
 [https://tdmc-cp-tdmc.$tdmcBaseDomain$/](https://tdmc-cp-tdmc.$tdmcBaseDomain$/)
 
@@ -73,7 +73,7 @@ Access the TDMC GUI at this URL:
 TDMC Data Plane Creation
 -----------
 
-Go to "Infrastruture" "Cloud Provider Accounts", Click "Add Cloud Provider Acount", Select "TKGS" as provider and use these credentials
+To create a data plane go to "Infrastruture" "Cloud Provider Accounts", Click "Add Cloud Provider Acount", Select "TKGS" as provider and use these credentials
 
 
 ```
