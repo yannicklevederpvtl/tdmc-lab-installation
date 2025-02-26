@@ -33,6 +33,12 @@ Follow the generated instructions based on your environment variables and creden
 ./generated/instructions.md
 ```
 
+Tanzu Platform for CF Integration
+------
+As of Tanzu Data Management Console version 1.0, there is a pre-alpha quality integration for Tanzu Platform for CF.  To get it working currently requires manually updating records in the TDMC management database.  Even when you do get it working, you can't control policies, backups, and you don't get a pgadmin interface to the database.  You can read the [current findings](https://docs.google.com/document/d/1RynLWLsBlK_0A3ymfBKdFDM4zIpAadHtDcEei5ND24o/edit?tab=t.0) from the team on this integration.
+
+The entire integration is being redesigned, and you can read up on some of [the plans for that integration in this document](https://docs.google.com/document/d/1AnjuxVsq1yRSd8iDN86hwmZHJCapHalheS2ujGmke38/edit?tab=t.0#heading=h.1x4gnkmhvbf9).
+
 Links
 -------
 
