@@ -23,7 +23,7 @@ Create a custom VM Class for your VKS clusters:
 VKS Clusters Creation
 -----------
 
-2 Kubernetes clusters will be used, one for the TDMC Control Plane and another to deploy one TDMC Data Plane (where the data services will be provisionned)
+2 Kubernetes clusters will be used, one for the TDMC Control Plane and another one to deploy a TDMC Data Plane (where data services will be provisionned)
 
 Create the TDMC Control Plane VKS cluster:
 
@@ -57,7 +57,7 @@ Launch the Tanzu Data Mangement Console Control Plane installation in this clust
 tdmc-installer install -f ./generated/tdmc-config-generated.yaml
 ```
 
-Configure DNS delegation or DNS records for **$tdmcBaseDomain$** with the details provided at the end of the installation
+Configure DNS delegation or DNS records for **$tdmcBaseDomain$** with details provided at the end of the installation results
 
 Then access the TDMC GUI at this URL:
 
@@ -96,7 +96,7 @@ Go to "Infrastructure" "Data Planes", Click "Create New Data Plane"
 Remaining tasks
 -----------
 
-Follow the official doccumentation to create organizations and provision data services
+Follow the official doccumentation to create organizations and to provision data services
 
 
 ### Uninstall
